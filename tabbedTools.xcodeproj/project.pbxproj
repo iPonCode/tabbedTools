@@ -57,14 +57,30 @@
 			isa = PBXGroup;
 			children = (
 				D01C3CF421AB05C8004988E9 /* AppDelegate.swift */,
-				D01C3CF621AB05C8004988E9 /* FirstViewController.swift */,
-				D01C3CF821AB05C8004988E9 /* SecondViewController.swift */,
-				D01C3CFA21AB05C8004988E9 /* Main.storyboard */,
+				D01C3D0821AB060B004988E9 /* Controllers */,
+				D01C3D0921AB0639004988E9 /* StoryBoards */,
 				D01C3CFD21AB05CC004988E9 /* Assets.xcassets */,
-				D01C3CFF21AB05CC004988E9 /* LaunchScreen.storyboard */,
 				D01C3D0221AB05CC004988E9 /* Info.plist */,
 			);
 			path = tabbedTools;
+			sourceTree = "<group>";
+		};
+		D01C3D0821AB060B004988E9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D01C3CF621AB05C8004988E9 /* FirstViewController.swift */,
+				D01C3CF821AB05C8004988E9 /* SecondViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D01C3D0921AB0639004988E9 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				D01C3CFA21AB05C8004988E9 /* Main.storyboard */,
+				D01C3CFF21AB05CC004988E9 /* LaunchScreen.storyboard */,
+			);
+			name = StoryBoards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
