@@ -53,8 +53,6 @@ class SecondViewController: UIViewController {
             //imprimimos el elemento añadido cada vez
             print("número \(i+1): \(fibonacci[i])")
         }
-        //print(fibID)
-        //print(fibonacci)
         
         //aquí utilizamos métodos nuevos implementados en Swift 4 Map, Filter y Reduce. En realidad utilizamos sus variantes compactMap y joined para obtener la versión array de String del array de Int con la serie de fibonacci y luego convertirlo todo en un solo String agregando un separador entre los elementos para poder mostrarlo en el textView
         //creamos un array de String a partir del array de Int, se utiliza un clousure donde dado un número entero devuelve la versión stringuizada del mismo, uno por uno pasando como parámetro $0. Este clousure es un mapeo o transformación de todos los elementos del array por eso indicamos $0. Es lo mismo que si hiciérmos un bucle for in que recorriera todos los elementos
@@ -66,12 +64,12 @@ class SecondViewController: UIViewController {
     }
     
     //action para controlar el evento cuando se pulsan los botones del stepper
-    
     @IBAction func stepperPressed(_ sender: UIStepper) {
         //sender es el stepper y tiene una variable value que es double y habrá que hacer un casting a Int pasándoselo a la funcion updateLbel
         updateLabel(id: Int(sender.value))
     }
     
+    //funcion que actualiza la etiqueta del stepper y llama a generateFibonacciNumbers para generarlos
     func updateLabel(id : Int){
         //actualizadmos fibID con el parámetro que recibimos, self. no sería necesario pero lo ponemos para indicar que fibID es una variable de clase
         self.fibID = id
