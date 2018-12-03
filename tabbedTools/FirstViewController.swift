@@ -76,11 +76,13 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         let shouldUserAccess = (userKey == "clave") && userNum == 7 // menos restrictivo con || ya que sólo se tendrían que cumplir una de las condiciones
         if shouldUserAccess {
             print(" >>> ACCESO CONCEDIDO <<< ")
-            self.view.backgroundColor = UIColor(red: 80.0/255.0, green: 222.0/255.0, blue: 104.0/255.0, alpha: 0.4)
+            self.view.backgroundColor = UIColor(red: 0.1, green: 1.0, blue: 0.3, alpha: 0.6)
+            //self.view.backgroundColor = green
 
         } else {
             print (" >>> ACCESO DENEGADO <<< ")
-            self.view.backgroundColor = UIColor(red: 234.0/255.0, green: 119.0/255.0, blue: 10.0/255.0, alpha: 0.4)
+            //self.view.backgroundColor = UIColor(red: 234.0/255.0, green: 119.0/255.0, blue: 10.0/255.0, alpha: 0.4)
+            self.view.backgroundColor = UIColor(red: 1.0, green: 0.1, blue: 0.3, alpha: 0.6)
         }
         
         //dejo comentada la versión preliminar
