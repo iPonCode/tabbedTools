@@ -163,33 +163,31 @@ Desliza (left swipe) hacia la izquierda para RESTABLECER el color de fondo.</str
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Selecciona cuántos números de Fibonacci
-que quieres ver, </string>
+quieres ver, el mínimo es </string>
                                         <attributes>
-                                            <font key="NSFont" size="20" name="AvenirNext-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="mínimo es ">
-                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="20" name="AvenirNext-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="3">
                                         <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="20" name="AvenirNext-Bold"/>
                                             <font key="NSOriginalFont" size="20" name="AvenirNext-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" y ">
+                                    <fragment content=" y el ">
                                         <attributes>
-                                            <font key="NSFont" size="20" name="AvenirNext-Medium"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="20" name="AvenirNext-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="m">
                                         <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="20" name="AvenirNext-Regular"/>
                                             <font key="NSOriginalFont" size="20" name="AvenirNext-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -197,12 +195,14 @@ que quieres ver, </string>
                                     </fragment>
                                     <fragment content="á">
                                         <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="20" name="AvenirNext-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="x">
                                         <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="20" name="AvenirNext-Regular"/>
                                             <font key="NSOriginalFont" size="20" name="AvenirNext-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -210,12 +210,14 @@ que quieres ver, </string>
                                     </fragment>
                                     <fragment content="imo es">
                                         <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="20" name="AvenirNext-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content=" ">
                                         <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="20" name="AvenirNext-Regular"/>
                                             <font key="NSOriginalFont" size="20" name="AvenirNext-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -223,7 +225,9 @@ que quieres ver, </string>
                                     </fragment>
                                     <fragment content="93">
                                         <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="20" name="AvenirNext-Bold"/>
+                                            <font key="NSOriginalFont" size="20" name="AvenirNext-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -231,16 +235,17 @@ que quieres ver, </string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fDF-QJ-fAB">
-                                <rect key="frame" x="177.33333333333337" y="120" width="177.66666666666663" height="30"/>
+                                <rect key="frame" x="209.66666666666663" y="120" width="145.33333333333337" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uW4-Vm-iyI">
-                                        <rect key="frame" x="0.0" y="0.0" width="63.666666666666664" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="93" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uW4-Vm-iyI">
+                                        <rect key="frame" x="0.0" y="0.0" width="31.333333333333332" height="30"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
-                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.95432931180000002" green="0.39985057709999999" blue="0.38276454809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minimumValue="2" maximumValue="92" translatesAutoresizingMaskIntoConstraints="NO" id="8D4-vn-ZKS">
-                                        <rect key="frame" x="83.666666666666657" y="0.6666666666666714" width="94" height="29"/>
+                                        <rect key="frame" x="51.333333333333343" y="0.6666666666666714" width="94" height="29"/>
+                                        <color key="tintColor" red="0.95432931180000002" green="0.39985057709999999" blue="0.38276454809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="stepperPressed:" destination="8rJ-Kc-sve" eventType="valueChanged" id="vaa-Pp-NIO"/>
                                         </connections>
@@ -252,23 +257,59 @@ que quieres ver, </string>
                                 </constraints>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2hr-sf-uGJ">
-                                <rect key="frame" x="20" y="168" width="335" height="553"/>
+                                <rect key="frame" x="20" y="168" width="335" height="513"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.
 Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ec1-nl-0Fj">
+                                <rect key="frame" x="20" y="120" width="149.66666666666666" height="30"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fP9-HV-Oil">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="30"/>
+                                        <color key="onTintColor" red="0.95432931180000002" green="0.39985057709999999" blue="0.38276454809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="switchMoved:" destination="8rJ-Kc-sve" eventType="valueChanged" id="RNo-zm-5ZH"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N. Áureo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4D7-Ul-hH7">
+                                        <rect key="frame" x="69" y="0.0" width="80.666666666666686" height="30"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7Zv-14-Ef8"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.618033988749895" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="Y7D-cM-CRO">
+                                <rect key="frame" x="20" y="691" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ooK-oF-49a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="0.95432931180000002" green="0.39985057709999999" blue="0.38276454809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="2hr-sf-uGJ" firstAttribute="top" secondItem="ec1-nl-0Fj" secondAttribute="bottom" constant="18" id="3LV-EH-apN"/>
                             <constraint firstItem="fDF-QJ-fAB" firstAttribute="top" secondItem="Hpl-Ic-sWX" secondAttribute="bottom" constant="18" id="7TO-xS-LeC"/>
+                            <constraint firstItem="ec1-nl-0Fj" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="9IX-rZ-94o"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="Hpl-Ic-sWX" secondAttribute="trailing" constant="20" id="Epd-wg-tSK"/>
                             <constraint firstItem="2hr-sf-uGJ" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="FjE-Bl-rji"/>
+                            <constraint firstItem="Y7D-cM-CRO" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="Gbo-Bv-Tzl"/>
                             <constraint firstItem="Hpl-Ic-sWX" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="8" id="KHh-VA-g7f"/>
-                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="2hr-sf-uGJ" secondAttribute="bottom" constant="8" id="L7v-q0-Kcs"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="2hr-sf-uGJ" secondAttribute="bottom" constant="48" id="L7v-q0-Kcs"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="2hr-sf-uGJ" secondAttribute="trailing" constant="20" id="QFU-eS-akr"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="Y7D-cM-CRO" secondAttribute="trailing" constant="20" id="RFc-YE-EkH"/>
+                            <constraint firstItem="ec1-nl-0Fj" firstAttribute="top" secondItem="Hpl-Ic-sWX" secondAttribute="bottom" constant="18" id="UyI-lX-uy0"/>
                             <constraint firstItem="2hr-sf-uGJ" firstAttribute="top" secondItem="fDF-QJ-fAB" secondAttribute="bottom" constant="18" id="V9v-4V-pFr"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="Y7D-cM-CRO" secondAttribute="bottom" constant="8" id="Zze-oM-Ayf"/>
                             <constraint firstItem="Hpl-Ic-sWX" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="mw4-9e-8DD"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="fDF-QJ-fAB" secondAttribute="trailing" constant="20" id="ouh-Mo-oqp"/>
                         </constraints>
@@ -276,6 +317,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                     </view>
                     <tabBarItem key="tabBarItem" title="Fibonacci" image="second" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="labelGoldNum" destination="Y7D-cM-CRO" id="3vy-c2-nYu"/>
                         <outlet property="labelNum" destination="uW4-Vm-iyI" id="OxH-kS-UQ4"/>
                         <outlet property="stepper" destination="8D4-vn-ZKS" id="7FI-bb-yEf"/>
                         <outlet property="textViewResult" destination="2hr-sf-uGJ" id="PoJ-Pb-hK4"/>

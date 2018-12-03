@@ -16,11 +16,15 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var textViewResult: UITextView!
     //este outlet del stepper es para poder tomar el valor del mismo luego más tarde en el viewdidload, necesitamos referenciarlo para acceder a su valor según se cargue
     @IBOutlet weak var stepper: UIStepper!
+    //este outlet es para controlar por código la etiqueta donde se muestra el número de oro si el usuario lo ha seleccionado en el switch
+    @IBOutlet weak var labelGoldNum: UILabel!
     
     //variable (array de enteros) que irá guardando los números de fibonacci generados inicializandola con los dos números enteros obligarotios
     var fibonacci : [Int] = [0,1]
     //variable para guardar cuantos números de fibonacci quiero generar, será un Int y tengo que inicializarla con algún valor
     var fibID : Int = 1
+    //variable booleana que guarda el estado del switch con la decisión del usuairo de si quiere o no calcular el número de oro
+    var wantsGoldNum : Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +73,12 @@ class SecondViewController: UIViewController {
         updateLabel(id: Int(sender.value))
     }
     
+    //acción para controlar el evento cuando se desliza (o se mueve) el switch
+    @IBAction func switchMoved(_ sender: UISwitch) {
+        self.wantsGoldNum = sender.isOn //cuando el usario deslice actulizamos la variable global
+        calculateGoldNum() //y calculamos el número de oro si procede
+    }
+    
     //funcion que actualiza la etiqueta del stepper y llama a generateFibonacciNumbers para generarlos
     func updateLabel(id : Int){
         //actualizadmos fibID con el parámetro que recibimos, self. no sería necesario pero lo ponemos para indicar que fibID es una variable de clase
@@ -77,6 +87,26 @@ class SecondViewController: UIViewController {
         self.labelNum.text = "\(self.fibID+1)"
         //interesa también que cada vez que se actualizan las etiquetas se generen los números de fibonacci
         generateFibonacciNumbers()
+        //y se calcule el número de oro si es que el usuairo lo ha seleccionado en el switch
+        calculateGoldNum()
+    }
+    
+    //función que calcula el número de oro si el usuario lo ha seleccionado en el switch
+    func calculateGoldNum () {
+        //si el usuario quiere número de oro
+        if (self.wantsGoldNum) {
+            //hay que calcular el número de oro como cociente entre los dos últimos de la sucesión de fibonacci y mostrarlo en la etiqueta
+            let previous = Double(fibonacci[fibonacci.count-2])
+            let last = Double(fibonacci[fibonacci.count-1])
+            let goldNum = last / previous //calculamos el número de oro en un Double
+            self.labelGoldNum.text = String(goldNum) //lo mostramos en la etiqueta como String
+            print(" >>> QUIERE número áureo <<< \(goldNum)")
+
+        } else {
+            //no hay que calcular el número de oro y hay que restablecer el texto de la etiqueta
+            print(" >>> NO QUIERE número áureo <<< ")
+            self.labelGoldNum.text = "" //limpiamos la etiqueta
+        }
     }
 
 
