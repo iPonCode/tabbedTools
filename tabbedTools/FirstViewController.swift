@@ -21,9 +21,10 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
     var userKey = "" //inicializo con una cadena vacía
 
     override func viewDidLoad() {
+        super.viewDidLoad()
+        print("\n >>> ESTAMOS EN LA PRIMERA PESTAÑA: CLAVES <<< ")
         //utilizamos nuestra propia función para hacer las tareas de actualizar las etiquetas con el valor por defecto que tenga el slider al principio, según se carga
         updateSliderNumLabel()
-        super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     

@@ -22,22 +22,26 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //invocamos a la clase UIFont
-        self.families = UIFont.familyNames //inicializo este array de String global con el nombre de todas las mamilias de fuentes
+        print("\n >>> ESTAMOS EN LA TERCERA PESTAÑA: FUENTES <<< ")
+        //invocamos a la clase UIFont para recuperar el nombre de todas las familias de fuentes
+        //comento la siguiente línea porque ahora voy a recuperar los nombres de las fuentes en orden descendente: Los String son comparables con su nombre lexico-grafico
+        //self.families = UIFont.familyNames //inicializo este array de String global con el nombre de todas las mamilias de fuentes
+        self.families = UIFont.familyNames.sorted(by: { (s1, s2) -> Bool in
+            return s1 < s2
+        })
         for fam in families { //para cada familia, voy accediendo a sus nombres de fuente
             let currentFont = UIFont.fontNames(forFamilyName: fam)
             fonts[fam] = currentFont
-            print("\n")
+            /*print("\n")
             print(fam)
             print("__________________")
-            print(currentFont)
+            print(currentFont)*/
         }
-        print("=========================") //después del bucle imprimo 1 vez todas las fuentes que he ido guardando en el diccionario fonts
+        print(" >>> COLECCIÓN DE FAMILIAS Y FUENTES (fonts) <<< ") //después del bucle imprimo 1 vez todas las fuentes que he ido guardando en el diccionario fonts
+        print(" _______________________________________________ \n")
         print(fonts) //imprimo todo el diccionario
-        print("\n")
-        print("count y capacity:")
-        print(fonts.count)
-        print(fonts.capacity)
+        print("\n*******************")
+        print("Número de familias o de parejas clave-valor del diccionario (fonts.count): >> \(fonts.count) <<")
 
         // Do any additional setup after loading the view.
     }
@@ -53,7 +57,7 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
  
 
-    // MARK: - Métodos del protocolo UIViewDatasource
+    // MARK: - Métodos del protocolo UITableViewDataSource
     
     //este no es obligatorio pero lo ponemos para ver las secciones de una table: por defecto una tabla tiene una sección, las secciones están separadas por separadores (por ejemplo, la app de contactos) y para cada sección puede haber varias filas
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -70,11 +74,28 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "FontFamilyCell", for: indexPath)
         //podría simplemente devolver la celda sin hacer nada con ella, pero me interesa poner en ella algo de texto antes, evidentemete.
         //utilizamos la propiedad text del textLabel de la celda para imprimir el nombre de la familia que haya en el array de familias en la posición que me indique el indexPath (recordamos que la tabla tiene tantas filas como elementos (count) tiene el array families. IndexPath tiene row con la fila en la que estamos y section con la seccion en la que estamos, ahora mismo section no nos interesa puesto que la configuramos en una (estaríamos en la sección cero, puesto que solo hay una)
-        cell.textLabel?.text = families[indexPath.row]
+        let fontFamily = families[indexPath.row]
+        //cambiamos el tipo de fuente de la celda haciéndolo coincidir con el nombre de la fuente que está mostrando
+        cell.textLabel?.text = fontFamily
+        cell.textLabel?.font = UIFont(name: fontFamily, size: 20.0)
         //devolvemos la celda
         return cell
         //con este método definido así estaríamos llenando la tabla con el nombre de las familias de las fuentes
     }
     
+    /* Cuando tenemos una tabla el objetivo es mostrar elementos en sus celdas, la tabla no se rellena automáticamente sino que DELEGA esa tarea en otro elemento, el UIViewController. Hemos implementado tres métodos que no son propios, son de UIViewTableDataSource. Estos métodos se comunican con la tabla para que haga una tarea concreta:
+        1.- El primer método le dice a la tabla que prepare una sección, recibe la tabla y devuelve un entero con el número de secciones. No es obligatorio definir este método
+        2.- El segundo método es obligatorio y define el número de filas en cada sección.
+        3.- El tercer método es obligatorio. Una vez que tenemos el número de secciones y el número de filas hay que configurar el contenido que cada celda, que es lo que hace este tercer método. Para ello necesita de un identificador de celda reutilizable que hemos de haber definido previamente en las propiedades de la celda prototipo que tenemos en el storyboard. Este metodo recibe por parámetro un cellForRowAt IndexPath, este elemento tiene sección por un lado y fila por otro. De esta, dentro de este método,  pordemos acceder a cada una de las celdas desencolandola utilizando el método dequeueReusableCell */
 
+    //MARK: Métodos del protocolo UITableViewDelegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row //recupero la posición de la celda que ha seleccionado el usurio
+        print(">>> ESTE ES EL VALOR DE indexPath.row >>> \(row) <<<")
+        let fontFamily = families[row] //recuperamos el nombre de la familia
+        let fontsLocal = self.fonts[fontFamily]! //recupero las fuentes pertenecientes a la familia, estando seguro ! de que no será nil, en el caso de que no haya fuentes en la familia seleccionada devolverá un array de String vacío, pero no nil, por eso indico ! de esta forma al imprimir en consola tampoco aparecera Optinal al imprimir familias sin fuentes, directamente imprimirá [] (Array vacío). Con ! forzamos que un valor opcional sea obligatorio ("yo programador", estoy seguro seguro de que esto no será nunca nulo. Si me equivoco la app tendrá un error en ejecución)
+        print("\n>>> EL USUARIO HA SELECCIONADO: <<< ")//y lo imprimimos por consola para comprobar que lo hace lo que se espera
+        print("\tLa FAMILIA >>> \(fontFamily) <<<") //la familia
+        print("\tque contiene estas FUENTES:\n\t\t \(fontsLocal)") //y las fuentes de esa familia
+    }
 }

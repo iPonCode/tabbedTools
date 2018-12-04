@@ -28,6 +28,8 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("\n >>> ESTAMOS EN LA SEGUNDA PESTAÑA: FIBONACCI <<< ")
+
         //según se cargue la vista, es decir, el usuario haga tap en la segunda pestaña, entonces se ejecuta este código
         //comento la siguiente línea porque ya no quiero inicializar fibID así, ahora que tenemos un stepper, lo haré de otra forma en la función updateLabel
         /*fibID = 92 //establezco el fibID en el máximo que me es capaz de almacenar en un tipo Int*/
