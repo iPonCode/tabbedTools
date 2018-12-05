@@ -54,6 +54,18 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        //si el identificador del segue coincide con nuestro segue entonces es que vamos a ir al navigation controller, entonces le pasamos la info de la familia seleccionada y los nombres de sus fuentes
+        if segue.identifier == "ShowFontsForFamily" {
+            //el segue enlaza a un navvigation controller que a su vez enlaza con el view controller con el detalle, así que primero recogemos el navigator en una constante
+            let navController = segue.destination as! UINavigationController //indicamos ! al compilador para asegurarle que siempre recibira un objeto de tipo UINavigationController y no otra cosa
+            //ahora ya pdemos recoger el view controller traves de la constante con el navigation
+            let destinationFontDetailViewController = navController.topViewController as! FontDetailViewController //accedemos al primer hijo del navigation que es el view controller del detalle que queremos a través de .topViewController.
+            //aquí me quedo con el número de fila que el usuario ha seleccionado
+            let selectedRowNum = self.tableView.indexPathForSelectedRow!.row //aquí estoy seguro ! de que indexPathForSelecttedRow existe porque el usuairo ha seleccionado una celda del tableView
+            //finalmente obtengo el nombre de la familia y el nombre de todas las fuentes de esa familia el objeto de tipo FontDetailViewController que tenía preparado y tiene definidas en su clase las variables globales familyNameVarFDVC y fontsVarFDVC
+            destinationFontDetailViewController.familyNameVarFDVC = self.families[selectedRowNum]
+            destinationFontDetailViewController.fontsVarFDVC = self.fonts[self.families[selectedRowNum]]!
+        }
     }
  
 

@@ -15,22 +15,31 @@ class FontDetailViewController: UIViewController {
     @IBOutlet weak var pickerFonts: UIPickerView!
     @IBOutlet weak var textView: UITextView!
     
+    //Estas dos variables globales  me van a permitir guardar la información que me pase el ThirdViewController cuando el usuario pulse una celda de la tabla. Podrían ser constantes pero tendríamos que inicializarlas sobreescribiendo un método Init y da mucha pereza. Accederemos a ellas instanciando un objeto de esta clase FontDetailViewController en ThirdViewController. De esta forma pasamos la info que necesitamos de un view controller a otro (en medio existe un navigation controller que tendremos que tener en cuenta a la hora acceder al segue, esto lo haremos en ThirdViewController)
+    var familyNameVarFDVC : String = "" //guardará el nombre de la familia seleccionada
+    var fontsVarFDVC : [String] = [] //guardará todos los nombres de fuentes de esa familia
+    
     //esto ocurrirá según se muestre este FontDetailViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         print("\n >>> ESTAMOS EN LA PESTAÑA: DETALLE DE LA FAMILIA DE LA FUENTE <<< ")
+        self.labelTitle.text = familyNameVarFDVC //actualizamos el título de la etiqueta con el nombre de la familia recibida por el segue
+        self.labelTitle.font = UIFont(name: familyNameVarFDVC, size: 20.0) //definimos la fuente de la etiqueta título con el nombre de la misma fuente que ha seleccionado el usuario y que recibimos por el segue
 
         // Do any additional setup after loading the view.
     }
     
 
-    /*
+    
     // MARK: - Navigation
-
+     
+     //este método se ejecuta siempre que se llama a un segue donde se hace la transición hacia el navigation controller (y luego a la vista detalle)
+/*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        }
     }
     */
 
