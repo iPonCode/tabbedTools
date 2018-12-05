@@ -145,7 +145,7 @@ Desliza (left swipe) hacia la izquierda para RESTABLECER el color de fondo.</str
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="710" y="0.0"/>
+            <point key="canvasLocation" x="721" y="-700"/>
         </scene>
         <!--Fibonacci-->
         <scene sceneID="wg7-f3-ORb">
@@ -325,7 +325,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1428" y="0.0"/>
+            <point key="canvasLocation" x="1449" y="-700"/>
         </scene>
         <!--Fuentes-->
         <scene sceneID="oTa-zX-gWG">
@@ -382,7 +382,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfF-FR-sWo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2125.5999999999999" y="0.0"/>
+            <point key="canvasLocation" x="721" y="0.0"/>
         </scene>
         <!--Detalle de la fuente-->
         <scene sceneID="rx3-Yz-gaW">
@@ -448,7 +448,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVk-G7-B5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3824.8000000000002" y="3.6945812807881775"/>
+            <point key="canvasLocation" x="2199" y="0.0"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -485,7 +485,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5na-E3-tN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2882.4000000000001" y="3.6945812807881775"/>
+            <point key="canvasLocation" x="1450" y="0.0"/>
         </scene>
     </scenes>
     <resources>
