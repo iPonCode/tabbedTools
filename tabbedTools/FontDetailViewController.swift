@@ -34,4 +34,8 @@ class FontDetailViewController: UIViewController {
     }
     */
 
+    @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
+        //cerramos el view controller de forma animada, el segundo parámetro completion handler puede ser nil o incluso se puede borrar
+        self.dismiss(animated: true, completion: nil)
+    }
 }

@@ -356,7 +356,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="V27-7G-xaG" kind="show" identifier="ShowFontsForFamily" id="rrw-dM-4k6"/>
+                                            <segue destination="ttf-9T-XG5" kind="show" identifier="ShowFontsForFamily" id="rrw-dM-4k6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -384,7 +384,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
             </objects>
             <point key="canvasLocation" x="2125.5999999999999" y="0.0"/>
         </scene>
-        <!--Font Detail View Controller-->
+        <!--Detalle de la fuente-->
         <scene sceneID="rx3-Yz-gaW">
             <objects>
                 <viewController id="V27-7G-xaG" customClass="FontDetailViewController" customModule="tabbedTools" customModuleProvider="target" sceneMemberID="viewController">
@@ -393,7 +393,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título de la fuente aquí" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGN-Qg-4oJ">
-                                <rect key="frame" x="20" y="52" width="335" height="50"/>
+                                <rect key="frame" x="20" y="96" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="RQk-AE-z1d"/>
                                 </constraints>
@@ -402,10 +402,10 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k19-tr-3wN">
-                                <rect key="frame" x="0.0" y="110" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="154" width="375" height="216"/>
                             </pickerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q2n-Oz-UdO">
-                                <rect key="frame" x="20" y="334" width="335" height="436"/>
+                                <rect key="frame" x="20" y="378" width="335" height="392"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.
 
@@ -433,6 +433,13 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Xx-2G-Ptb"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Detalle de la fuente" id="vRJ-lw-lUP">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="Osh-Yt-dJW">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="V27-7G-xaG" id="tv2-d0-wEk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="labelTitle" destination="WGN-Qg-4oJ" id="JeV-Cq-3GL"/>
                         <outlet property="pickerFonts" destination="k19-tr-3wN" id="MSH-xK-NxQ"/>
@@ -441,7 +448,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVk-G7-B5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2882.4000000000001" y="3.6945812807881775"/>
+            <point key="canvasLocation" x="3824.8000000000002" y="3.6945812807881775"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -461,6 +468,24 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CvQ-ve-ftM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ttf-9T-XG5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v7s-PE-gXO">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="V27-7G-xaG" kind="relationship" relationship="rootViewController" id="EeT-AB-wHc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5na-E3-tN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2882.4000000000001" y="3.6945812807881775"/>
         </scene>
     </scenes>
     <resources>
