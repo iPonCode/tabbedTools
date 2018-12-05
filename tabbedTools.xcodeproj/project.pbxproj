@@ -14,6 +14,7 @@
 		D01C3D0121AB05CC004988E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01C3CFF21AB05CC004988E9 /* LaunchScreen.storyboard */; };
 		D01C3D0A21AB0EAE004988E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01C3CFD21AB05CC004988E9 /* Assets.xcassets */; };
 		D01C3D0C21AB85D5004988E9 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C3D0B21AB85D5004988E9 /* ThirdViewController.swift */; };
+		D04D546621B747A300C3C2FB /* FontDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D546521B747A200C3C2FB /* FontDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D01C3D0021AB05CC004988E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D01C3D0221AB05CC004988E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D01C3D0B21AB85D5004988E9 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		D04D546521B747A200C3C2FB /* FontDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				D01C3CF621AB05C8004988E9 /* FirstViewController.swift */,
 				D01C3CF821AB05C8004988E9 /* SecondViewController.swift */,
 				D01C3D0B21AB85D5004988E9 /* ThirdViewController.swift */,
+				D04D546521B747A200C3C2FB /* FontDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04D546621B747A300C3C2FB /* FontDetailViewController.swift in Sources */,
 				D01C3CF921AB05C8004988E9 /* SecondViewController.swift in Sources */,
 				D01C3CF521AB05C8004988E9 /* AppDelegate.swift in Sources */,
 				D01C3D0C21AB85D5004988E9 /* ThirdViewController.swift in Sources */,
