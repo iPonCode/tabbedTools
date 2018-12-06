@@ -24,7 +24,7 @@ class FontDetailViewController: UIViewController, UIPickerViewDataSource, UIPick
         super.viewDidLoad()
         print("\n >>> ESTAMOS EN LA PESTAÑA: DETALLE DE LA FAMILIA DE LA FUENTE <<< ")
         self.labelTitle.text = familyNameVarFDVC //actualizamos el título de la etiqueta con el nombre de la familia recibida por el segue
-        self.labelTitle.font = UIFont(name: familyNameVarFDVC, size: 20.0) //definimos la fuente de la etiqueta título con el nombre de la misma fuente que ha seleccionado el usuario y que recibimos por el segue
+        self.labelTitle.font = UIFont(name: familyNameVarFDVC, size: 50.0) //definimos la fuente de la etiqueta título con el nombre de la misma fuente que ha seleccionado el usuario y que recibimos por el segue
         
         //esto es para indicar el delegado y data source por codigo en lugar de hacerlo a través de la interface gráfica de xcode arrastrando con la tecla control pulsada
         self.pickerFonts.dataSource = self //la fuente de datos de la variable global pickerFonts va a ser mi propia clase FontDetailViewController
@@ -33,7 +33,11 @@ class FontDetailViewController: UIViewController, UIPickerViewDataSource, UIPick
         //controlar con este condicional si no hay nombres de fuentes en una familia escondemos el pickerView
         if fontsVarFDVC.count == 0 {
             pickerFonts.isHidden = true //por ejemplo, la familia "Bangla Sangam MN" no tiene nombres de fuentes, si seleccionamos esta familia en el tableView al entrar en el FontDetailViewController se debería esconder (no mostrar) el PickerView puesto que no hay nada que mostrar
+        } else { //si hay nombres de fuentes entonces siempre inicializamos el tipo de fuente con el primer valor del pickerview por defecto
+            changeTextViewFonts(row : 0) //cambiamos la fuente al text del textView por defecto siempre en la primera posición del pickerview
         }
+        
+       
         // Do any additional setup after loading the view.
     }
     
@@ -73,4 +77,19 @@ class FontDetailViewController: UIViewController, UIPickerViewDataSource, UIPick
         //devuelvo el contenido de la fila que es un String con el nombre de las fuentes
         return fontsVarFDVC[row]
     }
+    
+    // MARK: Métodos del UIPickerViewDelegate
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        //esto se hará en tiempo real cada vez que selecciona una fila del picker
+        changeTextViewFonts(row: row)
+    }
+    
+    // MARK: Métodos propios
+    //esta función cambia la fuente del dexto del textView según la celda seleccionada del picker view que recibe como parámetro
+    func changeTextViewFonts (row : Int){
+        print("la fila seleccionada en el pickerview es: \(row)")
+        let font = self.fontsVarFDVC[row]
+        self.textView.font = UIFont(name: font, size: 20.0)
+    }
+
 }
